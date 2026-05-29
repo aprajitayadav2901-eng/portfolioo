@@ -377,26 +377,7 @@ function Portfolio() {
               </div>
             </Reveal>
             <Reveal className="lg:col-span-3" delay={0.1}>
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const fd = new FormData(e.currentTarget);
-                  const subject = encodeURIComponent(`Portfolio inquiry from ${fd.get("name")}`);
-                  const body = encodeURIComponent(`${fd.get("message")}\n\n— ${fd.get("name")} (${fd.get("email")})`);
-                  window.location.href = `mailto:aprajitayadav2901@gmail.com?subject=${subject}&body=${body}`;
-                }}
-                className="glass-card rounded-3xl p-8 space-y-4"
-              >
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input required name="name" placeholder="Your Name" className="w-full px-4 py-3 rounded-xl bg-[oklch(0.18_0.03_270/0.6)] border border-border focus:border-[var(--neon-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--neon-blue)]/30 transition-all" />
-                  <input required type="email" name="email" placeholder="Email" className="w-full px-4 py-3 rounded-xl bg-[oklch(0.18_0.03_270/0.6)] border border-border focus:border-[var(--neon-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--neon-blue)]/30 transition-all" />
-                </div>
-                <input name="subject" placeholder="Subject" className="w-full px-4 py-3 rounded-xl bg-[oklch(0.18_0.03_270/0.6)] border border-border focus:border-[var(--neon-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--neon-blue)]/30 transition-all" />
-                <textarea required name="message" rows={6} placeholder="Tell me about your project..." className="w-full px-4 py-3 rounded-xl bg-[oklch(0.18_0.03_270/0.6)] border border-border focus:border-[var(--neon-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--neon-blue)]/30 transition-all resize-none" />
-                <button type="submit" className="btn-neon w-full justify-center">
-                  Send Message <Send className="w-4 h-4" />
-                </button>
-              </form>
+              <ContactForm />
             </Reveal>
           </div>
         </div>
