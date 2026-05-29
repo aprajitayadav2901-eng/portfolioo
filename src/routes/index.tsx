@@ -423,31 +423,33 @@ function ContactForm() {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const payload = {
-      name: fd.get("name"),
-      email: fd.get("email"),
-      _subject: fd.get("subject") || `Portfolio inquiry from ${fd.get("name")}`,
-      message: fd.get("message"),
+    const name = String(fd.get("name") || "");
+    const params = {
+      name,
+      from_name: name,
+      email: String(fd.get("email") || ""),
+      from_email: String(fd.get("email") || ""),
+      reply_to: String(fd.get("email") || ""),
+      subject: String(fd.get("subject") || `Portfolio inquiry from ${name}`),
+      message: String(fd.get("message") || ""),
+      title: String(fd.get("subject") || `Portfolio inquiry from ${name}`),
     };
 
     setStatus("loading");
     setErrorMsg("");
     try {
-      const res = await fetch("https://formsubmit.co/ajax/aprajitayadav2901@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error(`Request failed (${res.status})`);
-      const data = await res.json();
-      if (data.success === "false" || data.success === false) {
-        throw new Error(data.message || "Submission failed");
-      }
+      const emailjs = (await import("@emailjs/browser")).default;
+      await emailjs.send(
+        "service_xy1th1m",
+        "template_k472fpe",
+        params,
+        { publicKey: "HSDPeV-yidBC4jlgC" }
+      );
       setStatus("success");
       form.reset();
-    } catch (err) {
+    } catch (err: any) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
+      setErrorMsg(err?.text || (err instanceof Error ? err.message : "Something went wrong"));
     }
   };
 
