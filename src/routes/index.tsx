@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {
-  Github, Linkedin, Mail, Download, ExternalLink, ArrowRight,
+  Github, Linkedin, Mail, ExternalLink, ArrowRight,
   GraduationCap, Briefcase, Code2, Cpu, Eye, Layers,
   Brain, Hand, Car, Sparkles, MapPin, Send,
 } from "lucide-react";
