@@ -57,10 +57,3 @@ VIT Bhopal University
 * LinkedIn: www.linkedin.com/in/aprajitay
 
 
-## ⭐ Support
-
-If you like this project, feel free to star the repository and connect with me.
-
----
-
-Built with ❤️ using Lovable AI 
