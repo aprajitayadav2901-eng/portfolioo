@@ -106,7 +106,7 @@ export function VoiceAssistant() {
                 <span className="absolute -inset-1 rounded-full bg-[var(--neon-blue)]/30 animate-ping" />
               )}
             </div>
-            <span className="text-xs font-semibold text-gradient">AI Assistant</span>
+            <span className="text-xs font-semibold text-gradient">Aprajita</span>
             <button
               onClick={() => setOpen(false)}
               className="ml-auto text-muted-foreground hover:text-foreground text-xs"
