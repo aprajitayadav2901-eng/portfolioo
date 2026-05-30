@@ -11,6 +11,7 @@ import portrait from "@/assets/aprajita-portrait.jpg";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { Navbar } from "@/components/Navbar";
 import { Reveal, SectionTitle } from "@/components/Reveal";
+import { VoiceAssistant } from "@/components/VoiceAssistant";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -84,6 +85,7 @@ function Portfolio() {
       <ParticleBackground />
       <div className="fixed inset-0 -z-20 grid-bg" aria-hidden />
       <Navbar />
+      <VoiceAssistant />
 
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-20 px-6">
