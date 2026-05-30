@@ -84,4 +84,4 @@ If you like this project, feel free to star the repository and connect with me.
 
 ---
 
-Built with ❤️ using Lovable AI and modern web technologies.
+Built with ❤️ using Lovable AI 
