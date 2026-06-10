@@ -255,6 +255,7 @@ function Portfolio() {
                   <div className="flex items-start gap-6">
                     <span className="font-mono text-xs text-muted-foreground pt-2">{s.num}</span>
                     <div>
+                      <div className="text-3xl mb-4">{s.icon}</div>
                       <h3 className="display text-3xl md:text-4xl mb-3">{s.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed max-w-md">{s.desc}</p>
                     </div>
